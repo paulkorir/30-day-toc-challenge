@@ -14,13 +14,13 @@ def main():
     if user_name == "":
         print("No name found.")
         return 1
+    # handle non-ascii name
     elif not user_name.isalpha():
         print("Invalid name.")
         return 1
-    # handle non-ascii name
-
-    print(f"Hello {user_name}!")
-    return 0 # OK
+    else:
+        print(f"Hello {user_name}!")
+        return 0 # OK
 
 
 if __name__ == '__main__':
